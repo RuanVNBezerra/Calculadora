@@ -14,9 +14,15 @@ namespace Calculadora
 
             Console.WriteLine("BEM VINDO A SUA CALCULADORA!");
             Console.WriteLine("Digite o primeiro numero: ");
-            numero1 = float.Parse(Console.ReadLine()); // aqui está armazenando o número do usúario
+            while (!float.TryParse(Console.ReadLine(), out numero1)) // Enquanto oque for colocado for diferente de um numero, da erro e retorna a mesma pergunta até o usuario digitar um numero
+            {
+                Console.WriteLine("Entrada invalida para a calculadora, por favor insira um numero valido!");
+            }
             Console.WriteLine("Digite o segundo numero: ");
-            numero2 = float.Parse(Console.ReadLine());// aqui está armazenando o segundo número do usúario
+            while (!float.TryParse(Console.ReadLine(),out numero2)) // A mesma coisa acontece aqui
+            {
+                Console.WriteLine("Entrada invalida para a calculadora, por favor insira um numero valido!");
+            }
             Console.WriteLine("Escolha o operador: (+ , - , * , / )");
             operacoes = Console.ReadKey().KeyChar; // necessario para ler o caractere
 
