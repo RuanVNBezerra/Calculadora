@@ -19,7 +19,7 @@ namespace Calculadora
             {
                 Console.WriteLine("Digite o primeiro numero: (Ou digite 'sair' para encerrar o programa) ");
                 input = Console.ReadLine();
-                if (input.ToLower() == "sair") // caso o usuario digite "sair" minusculo, o programa encerra.
+                if (input.ToLower() == "sair") // caso o usuario digite "sair" minusculo ou maiusculo, o programa encerra.
                 {
                     break;
                 }
