@@ -23,13 +23,13 @@ namespace Calculadora
                 {
                     break;
                 }
-                while(!float.TryParse(input, out numero1)) // Enquanto oque o usuario não digitar um numero, o programa ficara em loop até um numero ser inserido.
+                while (!float.TryParse(input, out numero1)) // Enquanto oque o usuario não digitar um numero, o programa ficara em loop até um numero ser inserido.
                 {
                     Console.WriteLine("Erro na entrada, por favor digite um numero valido");
-                    input = Console.ReadLine(); 
+                    input = Console.ReadLine();
 
                     if (input.ToLower() == "sair") // verifica denovo se o usuario deseja encerrar o programa 
-                    { 
+                    {
                         break;
                     }
                 }
@@ -41,11 +41,11 @@ namespace Calculadora
                     break;
                 }
 
-                while (!float.TryParse(input,out numero2))
+                while (!float.TryParse(input, out numero2))
                 {
                     Console.WriteLine("Erro na entrada, por favor digite um numero valido");
-                    input = Console.ReadLine(); 
-                    if(input.ToLower() == "sair" )
+                    input = Console.ReadLine();
+                    if (input.ToLower() == "sair")
                     {
                         break;
                     }
@@ -55,12 +55,12 @@ namespace Calculadora
                 operaçoes = Console.ReadKey().KeyChar; // le o caractere que o usuario digitar
 
                 Console.WriteLine(); // pular linha
-                
-              /*
-             Aqui dependendo do caso que o usúario escolher 
-             um desses casos abaixo irá acontecer
-             */
-                
+
+                /*
+               Aqui dependendo do caso que o usúario escolher 
+               um desses casos abaixo irá acontecer
+               */
+
                 switch (operaçoes)
                 {
                     case '+': // caso de soma
@@ -82,12 +82,12 @@ namespace Calculadora
                             resultado = numero1 / numero2;
                             Console.WriteLine($"A divisão de {numero1} / {numero2} é {resultado}");
                         }
-                        else 
+                        else
                         {
                             Console.WriteLine("ERRO! numero divisivel por zero não é permitido");
                         }
                         break;
-                        default:
+                    default:
                         Console.WriteLine("ERRO! operação invalida!");
                         break;
 
